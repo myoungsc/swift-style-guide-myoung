@@ -1,7 +1,7 @@
 ![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
 
 # swift-style-guide-myoung
-개인적인 Swift언어 스타일 가이드입니다. Pod파일 및 개인 프로젝트등에 적용될 예정입니다.
+개인적인 Swift언어 스타일 가이드입니다. Pod파일 및 개인 프로젝트등에 적용될 예정입니다. 언제든지 변경 가능합니다.
 
 
 ## Index
@@ -10,6 +10,8 @@
 	- [들여쓰기 및 띄어쓰기](#들여쓰기-및-띄어쓰기)
 	- [줄바꿈](#줄바꿈)
 	- [최대 줄 길이](#최대-줄-길이)
+	- [줄바꿈](#줄바꿈)
+	- [주석](#주석)
 - [참고](#참고) 
 
 
@@ -28,8 +30,30 @@
 
 #### 최대 줄 길이
 
-- 한 줄은 최대 100자로 제한합니다.
-    Xcode의 Preferences → Text Editing → Editing의 'Page guide at column' 옵션을 활성화하고 100으로 설정하면 편리합니다. 줄라인 생겨서 보기 편합니다.
+- 한 줄은 최대 144자로 제한합니다.
+    Xcode의 Preferences → Text Editing → Editing의 'Page guide at column' 옵션을 활성화하고 145으로 설정하면 편리합니다. 줄라인 생겨서 보기 편합니다.
+
+#### 줄바꿈
+
+- 함수 정의, 함수 호출시 줄길이가 최대길이를 초과하실 경우 아래와 같이 수정합니다.
+	```swift
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // doSomething()
+    }
+	```
+
+#### 주석
+- 주석은 최대 줄 길이 수에 영향을 받지 않습니다.
+- 주석의 경우 함수(`{`) 옆에 붙여 줍니다.
+	```swift
+     func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell { //컬렉션 뷰 내용 정의
+        // doSomething()
+    }
+    ```
+- `MARK:` 경우 함수 별로 정리 할때, extension 설명을 할때 사용합니다.
+
 
 ## 참고
 
