@@ -12,8 +12,11 @@
 	- [최대 줄 길이](#최대-줄-길이)
 	- [줄바꿈](#줄바꿈)
 	- [주석](#주석)
-- [참고](#참고) 
-
+	- [MARK](#MARK)
+- [네이밍](#네이밍)
+	- [변수](#변수)
+	- [상수](#상수)
+- [참고](#참고)
 
 ## 코드 레이아웃
 #### 들여쓰기 및 띄어쓰기
@@ -36,24 +39,42 @@
 #### 줄바꿈
 
 - 함수 정의, 함수 호출시 줄길이가 최대길이를 초과하실 경우 아래와 같이 수정합니다.
-	```swift
+```swift
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // doSomething()
     }
-	```
+```
 
 #### 주석
 - 주석은 최대 줄 길이 수에 영향을 받지 않습니다.
 - 주석의 경우 함수(`{`) 옆에 붙여 줍니다.
-	```swift
+```swift
      func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell { //컬렉션 뷰 내용 정의
         // doSomething()
     }
-    ```
+```
+
+#### MARK
 - `MARK:` 경우 함수 별로 정리 할때, extension 설명을 할때 사용합니다.
 
+## 네이밍
+#### 변수
+- 변수는 lowerCamelCase를 사용합니다.
+- 변수이름 옆에는 자료형을 넣어서 정확히 구분합니다.
+```Swift
+	var maxCount: Int = 10
+    var nameList: [String] = ["명아무개", "김아무개"]
+```
+
+#### 상수
+- lowerCamelCase를 사용합니다.
+- 상수 이름 옆에는 자료형을 넣어서 정확히 구분합니다.
+```Swift
+	let maxCount: Int = 10
+    let nameList: [String] = ["명아무개", "김아무개"]
+```
 
 ## 참고
 
